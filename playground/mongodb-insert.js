@@ -5,7 +5,7 @@ MongoClient.connect("mongodb://localhost:27017/test",
 		if(err){
 			return console.log("Error while connecting to database..",err);
 		}
-		console.log("Connected to database successfully.",ObjectId);
+		console.log("Connected to database successfully.");
 		/*db.collection("Todos")
 		  .insertOne({
 		  	text:'Wash Dishes',

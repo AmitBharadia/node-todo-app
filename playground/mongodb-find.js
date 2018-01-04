@@ -7,13 +7,27 @@ MongoClient.connect("mongodb://localhost:27017/test",
     }
 
     console.log("Successfully connected to database");
-    db.collection('Todos')
+   /* db.collection('Todos')
       .find({
-      	text:'wash Dishes'
+      	text:'Wash Dishes'
       })
       .toArray()
       .then((doc)=>{
       	console.log("Found");
       	console.log(doc);
+      },(err)=>{
+      	console.log("Error occurred while finding record");
+      });*/
+
+      db.collection('Todos')
+      .find({
+      	text:'Wash Dishes'
+      })
+      .toArray()
+      .then((doc)=>{
+      	console.log("Found");
+      	console.log(doc);
+      },(err)=>{
+      	console.log("Error occurred while finding record");
       });
 })
