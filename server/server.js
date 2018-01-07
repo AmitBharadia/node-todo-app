@@ -6,7 +6,7 @@ const _ = require('lodash');
 var { mongoose } = require('./db/mongoose');
 var { Todo } = require('./models/todo');
 var { User } = require('./models/user');
-
+var port=process.env.PORT;
 
 var app = express();
 
@@ -98,8 +98,8 @@ app.patch('/todos/:id', (req, res) => {
         res.status(400).send();
     });
    });   
-app.listen(3000, () => {
-    console.log("Server started on port 3000");
+app.listen(port, () => {
+    console.log("Server started on port ", port);
 });
 
 
