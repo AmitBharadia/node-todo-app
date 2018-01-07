@@ -1,6 +1,6 @@
 const {MongoClient,ObjectId}=require("mongodb");
 
-MongoClient.connect("mongodb://localhost:27017/test",
+MongoClient.connect("mongodb://localhost:27017/Todo",
 	(err,db)=>{
     if(err){
     	return console.log("Error while connecting to database",e);
@@ -19,9 +19,9 @@ MongoClient.connect("mongodb://localhost:27017/test",
       	console.log("Error occurred while finding record");
       });*/
 
-      db.collection('Todos')
+      db.collection('todos')
       .find({
-      	text:'Wash Dishes'
+      	text:'Clean Room'
       })
       .toArray()
       .then((doc)=>{

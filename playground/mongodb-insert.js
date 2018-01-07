@@ -1,6 +1,6 @@
 var {MongoClient,ObjectId}=require("mongodb");
 
-MongoClient.connect("mongodb://localhost:27017/test",
+MongoClient.connect("mongodb://localhost:27017/Todo",
 	(err,db)=>{
 		if(err){
 			return console.log("Error while connecting to database..",err);
